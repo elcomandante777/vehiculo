@@ -1,0 +1,11 @@
+public class Pickup {
+    private String capacidadCarga;
+
+    public void setcapacidadCarga(String capacidadCarga) {
+        this.capacidadCarga = capacidadCarga;
+    }
+
+    public String getcapacidadCarga() {
+        return capacidadCarga;
+    }
+}
