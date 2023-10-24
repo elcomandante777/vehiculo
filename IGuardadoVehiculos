@@ -1,0 +1,6 @@
+import java.util.ArrayList;
+
+public interface IGuardadoVehiculos {
+    Vehiculo2 consultarVehiculos(int numVeh);
+    ArrayList<Vehiculo2> mostrarVehiculos();
+}
