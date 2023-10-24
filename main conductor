@@ -1,0 +1,33 @@
+import conduct.Conduct;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedir al usuario que ingrese los datos del conductor
+        System.out.println("Ingresa los datos del conductor:");
+        System.out.print("Vehiculo: ");
+        String vehiculo = scanner.nextLine();
+
+        System.out.print("Años de Experiencia: ");
+        int aExperiencia = scanner.nextInt();
+        scanner.nextLine(); // Consumir la nueva línea después de leer el entero.
+
+        System.out.print("Tipo de Licencia: ");
+        String explicencia = scanner.nextLine();
+
+        System.out.print("Calificacion: ");
+        double calificacion = scanner.nextDouble();
+
+        // Crear una instancia de la clase Conduct con los valores ingresados por el usuario
+        Conduct conductor1 = new Conduct(vehiculo, aExperiencia, explicencia, calificacion);
+
+        // Mostrar la informacion del conductor
+        System.out.println("\nInformacion del Conductor 1:");
+        System.out.println("Vehiculo: " + conductor1.getVehiculo());
+        System.out.println("Años de Experiencia: " + conductor1.getAexperiencia());
+        System.out.println("Tipo de Licencia: " + conductor1.getExplicencia());
+        System.out.println("Calificacion: " + conductor1.getCalificacion());
+    }
+}
