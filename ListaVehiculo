@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListaVehiculo {
+    private List<Vehiculo2> vehiculos;
+
+    public ListaVehiculo() {
+        vehiculos = new ArrayList<>();
+    }
+
+    public void agregarVehiculo(Vehiculo2 vehiculo) {
+        vehiculos.add(vehiculo);
+    }
+
+    public Vehiculo2 consultarVehiculo(int numVeh) {
+        for (Vehiculo2 vehiculo : vehiculos) {
+            if (vehiculo.getNumVeh() == numVeh) {
+                return vehiculo;
+            }
+        }
+        return null; // Si no se encuentra el vehículo
+    }
+
+    public ArrayList<Vehiculo2> mostrarVehiculos() {
+        return new ArrayList<>(vehiculos);
+    }
+}
