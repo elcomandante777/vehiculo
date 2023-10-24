@@ -73,4 +73,8 @@ public class Vehiculo2 {
         System.out.println("Tiene sistema de sonido? (si/no):");
         setSonido(scanner.next().equalsIgnoreCase("si"));
     }
+
+        public int getNumero() {
+        return numVeh;
+        }
 }
