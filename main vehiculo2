@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        Vehiculo2 miVehiculo = new Vehiculo2();
+        miVehiculo.ingresarDatos();
+
+        System.out.println("Numero de vehiculo: " + miVehiculo.getNumVeh());
+        System.out.println("Numero de placa: " + miVehiculo.getNumPlaca());
+        System.out.println("Numero de asientos: " + miVehiculo.getNumAsientos());
+        System.out.println("Tiene aire acondicionado? " + miVehiculo.getAire());
+        System.out.println("Tiene sistema de sonido? " + miVehiculo.getSonido());
+        miVehiculo.transportar();  
+    }
+}
