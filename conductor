@@ -1,0 +1,51 @@
+public class Conduct {
+    // Atributos
+    private String vehiculo;
+    private int aExperiencia;
+    private String explicencia;
+    private double calificacion;
+
+    // Constructor
+    public Conduct(String vehiculo, int aExperiencia, String explicencia, double calificacion) {
+        this.vehiculo = vehiculo;
+        this.aExperiencia = aExperiencia;
+        this.explicencia = explicencia;
+        this.calificacion = calificacion;
+    }
+
+    // Métodos get y set para vehiculo
+    public String getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(String vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    // Métodos get y set para aExperiencia
+    public int getAexperiencia() {
+        return aExperiencia;
+    }
+
+    public void setAexperiencia(int aExperiencia) {
+        this.aExperiencia = aExperiencia;
+    }
+
+    // Métodos get y set para explicencia
+    public String getExplicencia() {
+        return explicencia;
+    }
+
+    public void setExplicencia(String explicencia) {
+        this.explicencia = explicencia;
+    }
+
+    // Métodos get y set para calificacion
+    public double getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(double calificacion) {
+        this.calificacion = calificacion;
+    }
+}
