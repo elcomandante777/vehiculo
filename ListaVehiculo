@@ -1,27 +1,28 @@
 import java.util.ArrayList;
-import java.util.List;
 
-public class ListaVehiculo {
-    private List<Vehiculo2> vehiculos;
+public class ListaVehiculo implements IGuardadoVehiculos {
+    private ArrayList<Vehiculo2> vehiculos = new ArrayList<>();
 
-    public ListaVehiculo() {
-        vehiculos = new ArrayList<>();
+    @Override
+    public Vehiculo2 consultarVehiculos(int numVeh) {
+        for (Vehiculo2 vehiculo : vehiculos) {
+            if (vehiculo.getNumVeh() == numVeh) {
+                return vehiculo;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public ArrayList<Vehiculo2> mostrarVehiculos() {
+        return vehiculos;
     }
 
     public void agregarVehiculo(Vehiculo2 vehiculo) {
         vehiculos.add(vehiculo);
     }
 
-    public Vehiculo2 consultarVehiculo(int numVeh) {
-        for (Vehiculo2 vehiculo : vehiculos) {
-            if (vehiculo.getNumVeh() == numVeh) {
-                return vehiculo;
-            }
-        }
-        return null; // Si no se encuentra el vehículo
-    }
-
-    public ArrayList<Vehiculo2> mostrarVehiculos() {
-        return new ArrayList<>(vehiculos);
+    Vehiculo2 consultarVehiculo(int numVehiculo) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
