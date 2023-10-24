@@ -1,0 +1,35 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ListaVehiculo listaVehiculo = new ListaVehiculo();
+        Scanner scanner = new Scanner(System.in);
+
+        Vehiculo2 vehiculo = new Vehiculo2();
+        vehiculo.ingresarDatos();
+        listaVehiculo.agregarVehiculo(vehiculo);
+
+        System.out.println("Ingrese el numero de vehiculo a consultar:");
+        int numVehiculo = scanner.nextInt();
+        Vehiculo2 vehiculoConsultado = listaVehiculo.consultarVehiculo(numVehiculo);
+
+        if (vehiculoConsultado != null) {
+            System.out.println("Vehiculo encontrado:");
+            System.out.println("Numero de vehiculo: " + vehiculoConsultado.getNumVeh());
+            System.out.println("Numero de placa: " + vehiculoConsultado.getNumPlaca());
+            System.out.println("Numero de asientos: " + vehiculoConsultado.getNumAsientos());
+            System.out.println("Tiene aire acondicionado? " + vehiculoConsultado.getAire());
+            System.out.println("Tiene sistema de sonido? " + vehiculoConsultado.getSonido());
+            vehiculoConsultado.transportar();
+        } else {
+            System.out.println("Vehiculo no encontrado.");
+        }
+
+        ArrayList<Vehiculo2> listaDeVehiculos = listaVehiculo.mostrarVehiculos();
+        System.out.println("Lista de vehiculos:");
+        for (Vehiculo2 veh : listaDeVehiculos) {
+            System.out.println("Numero de vehiculo: " + veh.getNumVeh());
+        }
+    }
+}
