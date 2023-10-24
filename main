@@ -21,7 +21,7 @@ public class Main {
         // Consultar un vehiculo por numero
         System.out.println("Ingrese el numero de vehiculo a consultar:");
         int numVehiculo = scanner.nextInt();
-        Vehiculo2 vehiculoConsultado = listaVehiculo.consultarVehiculo(numVehiculo);
+        Vehiculo2 vehiculoConsultado = listaVehiculo.consultarVehiculos(numVehiculo);
 
         if (vehiculoConsultado != null) {
             System.out.println("Vehiculo encontrado:");
